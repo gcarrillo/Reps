@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9525" systemVersion="15C50" minimumToolsVersion="Automatic">
-    <entity name="BodyArea" syncable="YES">
+    <entity name="BodyArea" representedClassName="BodyArea" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="muscleGroups" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="MuscleGroup" inverseName="bodyArea" inverseEntity="MuscleGroup" syncable="YES"/>
     </entity>
-    <entity name="Exercise" syncable="YES">
+    <entity name="Exercise" representedClassName="Exercise" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="muscleGroups" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="MuscleGroup" inverseName="exercises" inverseEntity="MuscleGroup" syncable="YES"/>
         <relationship name="routines" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Routine" inverseName="exercises" inverseEntity="Routine" syncable="YES"/>
         <relationship name="sets" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Set" inverseName="exercise" inverseEntity="Set" syncable="YES"/>
     </entity>
-    <entity name="MuscleGroup" syncable="YES">
+    <entity name="MuscleGroup" representedClassName="MuscleGroup" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="bodyArea" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="BodyArea" inverseName="muscleGroups" inverseEntity="BodyArea" syncable="YES"/>
         <relationship name="exercises" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Exercise" inverseName="muscleGroups" inverseEntity="Exercise" syncable="YES"/>
     </entity>
-    <entity name="Routine" syncable="YES">
+    <entity name="Routine" representedClassName="Routine" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="exercises" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Exercise" inverseName="routines" inverseEntity="Exercise" syncable="YES"/>
     </entity>
-    <entity name="Set" syncable="YES">
+    <entity name="Set" representedClassName="Set" syncable="YES">
         <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="reps" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="weight" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>

@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "Exercise.h"
 
 @interface AppDelegate ()
 
@@ -14,9 +15,31 @@
 
 @implementation AppDelegate
 
+- (void)initStore {
+    NSFileManager *fm = [NSFileManager defaultManager];
+    
+    NSString *seed = [[NSBundle mainBundle] pathForResource: @"seed" ofType: @"sqlite"];
+    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"Reps.sqlite"];
+    if (![fm fileExistsAtPath:[storeURL path]]) {
+        NSLog(@"Using the original seed");
+        NSError *error = nil;
+        if (![fm copyItemAtPath:seed toPath:[storeURL path] error:&error]) {
+            NSLog(@"Error seeding: %@", error);
+            return;
+        }
+        
+        NSLog(@"Store successfully initialized using the original seed");
+    }
+    else {
+        NSLog(@"The original seed isn't needed. There is already a backing store.");
+    }
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    [self initStore];
+    
     return YES;
 }
 

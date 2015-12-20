@@ -16,6 +16,17 @@
 		CC9DE4B41C25CC3E009DA0BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC9DE4B21C25CC3E009DA0BD /* LaunchScreen.storyboard */; };
 		CC9DE4BF1C25CC3E009DA0BD /* RepsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CC9DE4BE1C25CC3E009DA0BD /* RepsTests.m */; };
 		CC9DE4CA1C25CC3E009DA0BD /* RepsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CC9DE4C91C25CC3E009DA0BD /* RepsUITests.m */; };
+		CC9DE4DB1C265CE2009DA0BD /* Exercise+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = CC9DE4D81C265CE2009DA0BD /* Exercise+CoreDataProperties.m */; };
+		CC9DE4DC1C265CE2009DA0BD /* Exercise.m in Sources */ = {isa = PBXBuildFile; fileRef = CC9DE4DA1C265CE2009DA0BD /* Exercise.m */; };
+		CC9DE4ED1C2735C4009DA0BD /* MuscleGroup+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = CC9DE4DE1C2735C4009DA0BD /* MuscleGroup+CoreDataProperties.m */; };
+		CC9DE4EE1C2735C4009DA0BD /* MuscleGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = CC9DE4E01C2735C4009DA0BD /* MuscleGroup.m */; };
+		CC9DE4EF1C2735C4009DA0BD /* Routine+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = CC9DE4E21C2735C4009DA0BD /* Routine+CoreDataProperties.m */; };
+		CC9DE4F01C2735C4009DA0BD /* Routine.m in Sources */ = {isa = PBXBuildFile; fileRef = CC9DE4E41C2735C4009DA0BD /* Routine.m */; };
+		CC9DE4F11C2735C4009DA0BD /* BodyArea+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = CC9DE4E61C2735C4009DA0BD /* BodyArea+CoreDataProperties.m */; };
+		CC9DE4F21C2735C4009DA0BD /* BodyArea.m in Sources */ = {isa = PBXBuildFile; fileRef = CC9DE4E81C2735C4009DA0BD /* BodyArea.m */; };
+		CC9DE4F31C2735C4009DA0BD /* Set+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = CC9DE4EA1C2735C4009DA0BD /* Set+CoreDataProperties.m */; };
+		CC9DE4F41C2735C4009DA0BD /* Set.m in Sources */ = {isa = PBXBuildFile; fileRef = CC9DE4EC1C2735C4009DA0BD /* Set.m */; };
+		CC9DE4F61C2753E1009DA0BD /* seed.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = CC9DE4F51C2753E1009DA0BD /* seed.sqlite */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +64,27 @@
 		CC9DE4C51C25CC3E009DA0BD /* RepsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RepsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC9DE4C91C25CC3E009DA0BD /* RepsUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RepsUITests.m; sourceTree = "<group>"; };
 		CC9DE4CB1C25CC3E009DA0BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC9DE4D71C265CE2009DA0BD /* Exercise+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Exercise+CoreDataProperties.h"; sourceTree = "<group>"; };
+		CC9DE4D81C265CE2009DA0BD /* Exercise+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Exercise+CoreDataProperties.m"; sourceTree = "<group>"; };
+		CC9DE4D91C265CE2009DA0BD /* Exercise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Exercise.h; sourceTree = "<group>"; };
+		CC9DE4DA1C265CE2009DA0BD /* Exercise.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Exercise.m; sourceTree = "<group>"; };
+		CC9DE4DD1C2735C4009DA0BD /* MuscleGroup+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "MuscleGroup+CoreDataProperties.h"; path = "../MuscleGroup+CoreDataProperties.h"; sourceTree = "<group>"; };
+		CC9DE4DE1C2735C4009DA0BD /* MuscleGroup+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "MuscleGroup+CoreDataProperties.m"; path = "../MuscleGroup+CoreDataProperties.m"; sourceTree = "<group>"; };
+		CC9DE4DF1C2735C4009DA0BD /* MuscleGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MuscleGroup.h; path = ../MuscleGroup.h; sourceTree = "<group>"; };
+		CC9DE4E01C2735C4009DA0BD /* MuscleGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MuscleGroup.m; path = ../MuscleGroup.m; sourceTree = "<group>"; };
+		CC9DE4E11C2735C4009DA0BD /* Routine+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Routine+CoreDataProperties.h"; path = "../Routine+CoreDataProperties.h"; sourceTree = "<group>"; };
+		CC9DE4E21C2735C4009DA0BD /* Routine+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Routine+CoreDataProperties.m"; path = "../Routine+CoreDataProperties.m"; sourceTree = "<group>"; };
+		CC9DE4E31C2735C4009DA0BD /* Routine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Routine.h; path = ../Routine.h; sourceTree = "<group>"; };
+		CC9DE4E41C2735C4009DA0BD /* Routine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Routine.m; path = ../Routine.m; sourceTree = "<group>"; };
+		CC9DE4E51C2735C4009DA0BD /* BodyArea+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "BodyArea+CoreDataProperties.h"; path = "../BodyArea+CoreDataProperties.h"; sourceTree = "<group>"; };
+		CC9DE4E61C2735C4009DA0BD /* BodyArea+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "BodyArea+CoreDataProperties.m"; path = "../BodyArea+CoreDataProperties.m"; sourceTree = "<group>"; };
+		CC9DE4E71C2735C4009DA0BD /* BodyArea.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BodyArea.h; path = ../BodyArea.h; sourceTree = "<group>"; };
+		CC9DE4E81C2735C4009DA0BD /* BodyArea.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BodyArea.m; path = ../BodyArea.m; sourceTree = "<group>"; };
+		CC9DE4E91C2735C4009DA0BD /* Set+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Set+CoreDataProperties.h"; path = "../Set+CoreDataProperties.h"; sourceTree = "<group>"; };
+		CC9DE4EA1C2735C4009DA0BD /* Set+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Set+CoreDataProperties.m"; path = "../Set+CoreDataProperties.m"; sourceTree = "<group>"; };
+		CC9DE4EB1C2735C4009DA0BD /* Set.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Set.h; path = ../Set.h; sourceTree = "<group>"; };
+		CC9DE4EC1C2735C4009DA0BD /* Set.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Set.m; path = ../Set.m; sourceTree = "<group>"; };
+		CC9DE4F51C2753E1009DA0BD /* seed.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = seed.sqlite; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +135,26 @@
 		CC9DE4A01C25CC3E009DA0BD /* Reps */ = {
 			isa = PBXGroup;
 			children = (
+				CC9DE4DD1C2735C4009DA0BD /* MuscleGroup+CoreDataProperties.h */,
+				CC9DE4DE1C2735C4009DA0BD /* MuscleGroup+CoreDataProperties.m */,
+				CC9DE4DF1C2735C4009DA0BD /* MuscleGroup.h */,
+				CC9DE4E01C2735C4009DA0BD /* MuscleGroup.m */,
+				CC9DE4E11C2735C4009DA0BD /* Routine+CoreDataProperties.h */,
+				CC9DE4E21C2735C4009DA0BD /* Routine+CoreDataProperties.m */,
+				CC9DE4E31C2735C4009DA0BD /* Routine.h */,
+				CC9DE4E41C2735C4009DA0BD /* Routine.m */,
+				CC9DE4E51C2735C4009DA0BD /* BodyArea+CoreDataProperties.h */,
+				CC9DE4E61C2735C4009DA0BD /* BodyArea+CoreDataProperties.m */,
+				CC9DE4E71C2735C4009DA0BD /* BodyArea.h */,
+				CC9DE4E81C2735C4009DA0BD /* BodyArea.m */,
+				CC9DE4E91C2735C4009DA0BD /* Set+CoreDataProperties.h */,
+				CC9DE4EA1C2735C4009DA0BD /* Set+CoreDataProperties.m */,
+				CC9DE4EB1C2735C4009DA0BD /* Set.h */,
+				CC9DE4EC1C2735C4009DA0BD /* Set.m */,
+				CC9DE4D71C265CE2009DA0BD /* Exercise+CoreDataProperties.h */,
+				CC9DE4D81C265CE2009DA0BD /* Exercise+CoreDataProperties.m */,
+				CC9DE4D91C265CE2009DA0BD /* Exercise.h */,
+				CC9DE4DA1C265CE2009DA0BD /* Exercise.m */,
 				CC9DE4A41C25CC3E009DA0BD /* AppDelegate.h */,
 				CC9DE4A51C25CC3E009DA0BD /* AppDelegate.m */,
 				CC9DE4A71C25CC3E009DA0BD /* ViewController.h */,
@@ -120,6 +172,7 @@
 		CC9DE4A11C25CC3E009DA0BD /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CC9DE4F51C2753E1009DA0BD /* seed.sqlite */,
 				CC9DE4A21C25CC3E009DA0BD /* main.m */,
 			);
 			name = "Supporting Files";
@@ -247,6 +300,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC9DE4F61C2753E1009DA0BD /* seed.sqlite in Resources */,
 				CC9DE4B41C25CC3E009DA0BD /* LaunchScreen.storyboard in Resources */,
 				CC9DE4B11C25CC3E009DA0BD /* Assets.xcassets in Resources */,
 				CC9DE4AC1C25CC3E009DA0BD /* Main.storyboard in Resources */,
@@ -274,10 +328,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC9DE4F21C2735C4009DA0BD /* BodyArea.m in Sources */,
 				CC9DE4A91C25CC3E009DA0BD /* ViewController.m in Sources */,
+				CC9DE4F41C2735C4009DA0BD /* Set.m in Sources */,
+				CC9DE4DC1C265CE2009DA0BD /* Exercise.m in Sources */,
+				CC9DE4F31C2735C4009DA0BD /* Set+CoreDataProperties.m in Sources */,
+				CC9DE4F01C2735C4009DA0BD /* Routine.m in Sources */,
+				CC9DE4ED1C2735C4009DA0BD /* MuscleGroup+CoreDataProperties.m in Sources */,
 				CC9DE4A61C25CC3E009DA0BD /* AppDelegate.m in Sources */,
 				CC9DE4A31C25CC3E009DA0BD /* main.m in Sources */,
 				CC9DE4AF1C25CC3E009DA0BD /* Reps.xcdatamodeld in Sources */,
+				CC9DE4EF1C2735C4009DA0BD /* Routine+CoreDataProperties.m in Sources */,
+				CC9DE4EE1C2735C4009DA0BD /* MuscleGroup.m in Sources */,
+				CC9DE4DB1C265CE2009DA0BD /* Exercise+CoreDataProperties.m in Sources */,
+				CC9DE4F11C2735C4009DA0BD /* BodyArea+CoreDataProperties.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -505,6 +569,7 @@
 				CC9DE4D01C25CC3E009DA0BD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CC9DE4D11C25CC3E009DA0BD /* Build configuration list for PBXNativeTarget "RepsTests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +578,7 @@
 				CC9DE4D31C25CC3E009DA0BD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CC9DE4D41C25CC3E009DA0BD /* Build configuration list for PBXNativeTarget "RepsUITests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +587,7 @@
 				CC9DE4D61C25CC3E009DA0BD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
