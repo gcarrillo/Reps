@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		CC9DE4A31C25CC3E009DA0BD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CC9DE4A21C25CC3E009DA0BD /* main.m */; };
 		CC9DE4A61C25CC3E009DA0BD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CC9DE4A51C25CC3E009DA0BD /* AppDelegate.m */; };
-		CC9DE4A91C25CC3E009DA0BD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC9DE4A81C25CC3E009DA0BD /* ViewController.m */; };
 		CC9DE4AC1C25CC3E009DA0BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC9DE4AA1C25CC3E009DA0BD /* Main.storyboard */; };
 		CC9DE4AF1C25CC3E009DA0BD /* Reps.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CC9DE4AD1C25CC3E009DA0BD /* Reps.xcdatamodeld */; };
 		CC9DE4B11C25CC3E009DA0BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC9DE4B01C25CC3E009DA0BD /* Assets.xcassets */; };
@@ -26,7 +25,8 @@
 		CC9DE4F21C2735C4009DA0BD /* BodyArea.m in Sources */ = {isa = PBXBuildFile; fileRef = CC9DE4E81C2735C4009DA0BD /* BodyArea.m */; };
 		CC9DE4F31C2735C4009DA0BD /* Set+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = CC9DE4EA1C2735C4009DA0BD /* Set+CoreDataProperties.m */; };
 		CC9DE4F41C2735C4009DA0BD /* Set.m in Sources */ = {isa = PBXBuildFile; fileRef = CC9DE4EC1C2735C4009DA0BD /* Set.m */; };
-		CC9DE4F61C2753E1009DA0BD /* seed.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = CC9DE4F51C2753E1009DA0BD /* seed.sqlite */; };
+		CC9DE4FA1C275CCE009DA0BD /* ExerciseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC9DE4F81C275CCE009DA0BD /* ExerciseTableViewController.m */; };
+		CC9DE56B1C279546009DA0BD /* seed.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = CC9DE56A1C279546009DA0BD /* seed.sqlite */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,8 +51,6 @@
 		CC9DE4A21C25CC3E009DA0BD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CC9DE4A41C25CC3E009DA0BD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CC9DE4A51C25CC3E009DA0BD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		CC9DE4A71C25CC3E009DA0BD /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		CC9DE4A81C25CC3E009DA0BD /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		CC9DE4AB1C25CC3E009DA0BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CC9DE4AE1C25CC3E009DA0BD /* Reps.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Reps.xcdatamodel; sourceTree = "<group>"; };
 		CC9DE4B01C25CC3E009DA0BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -84,7 +82,9 @@
 		CC9DE4EA1C2735C4009DA0BD /* Set+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Set+CoreDataProperties.m"; path = "../Set+CoreDataProperties.m"; sourceTree = "<group>"; };
 		CC9DE4EB1C2735C4009DA0BD /* Set.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Set.h; path = ../Set.h; sourceTree = "<group>"; };
 		CC9DE4EC1C2735C4009DA0BD /* Set.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Set.m; path = ../Set.m; sourceTree = "<group>"; };
-		CC9DE4F51C2753E1009DA0BD /* seed.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = seed.sqlite; sourceTree = "<group>"; };
+		CC9DE4F71C275CCE009DA0BD /* ExerciseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExerciseTableViewController.h; sourceTree = "<group>"; };
+		CC9DE4F81C275CCE009DA0BD /* ExerciseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExerciseTableViewController.m; sourceTree = "<group>"; };
+		CC9DE56A1C279546009DA0BD /* seed.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = seed.sqlite; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,8 +157,8 @@
 				CC9DE4DA1C265CE2009DA0BD /* Exercise.m */,
 				CC9DE4A41C25CC3E009DA0BD /* AppDelegate.h */,
 				CC9DE4A51C25CC3E009DA0BD /* AppDelegate.m */,
-				CC9DE4A71C25CC3E009DA0BD /* ViewController.h */,
-				CC9DE4A81C25CC3E009DA0BD /* ViewController.m */,
+				CC9DE4F71C275CCE009DA0BD /* ExerciseTableViewController.h */,
+				CC9DE4F81C275CCE009DA0BD /* ExerciseTableViewController.m */,
 				CC9DE4AA1C25CC3E009DA0BD /* Main.storyboard */,
 				CC9DE4B01C25CC3E009DA0BD /* Assets.xcassets */,
 				CC9DE4B21C25CC3E009DA0BD /* LaunchScreen.storyboard */,
@@ -172,7 +172,7 @@
 		CC9DE4A11C25CC3E009DA0BD /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				CC9DE4F51C2753E1009DA0BD /* seed.sqlite */,
+				CC9DE56A1C279546009DA0BD /* seed.sqlite */,
 				CC9DE4A21C25CC3E009DA0BD /* main.m */,
 			);
 			name = "Supporting Files";
@@ -300,7 +300,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC9DE4F61C2753E1009DA0BD /* seed.sqlite in Resources */,
+				CC9DE56B1C279546009DA0BD /* seed.sqlite in Resources */,
 				CC9DE4B41C25CC3E009DA0BD /* LaunchScreen.storyboard in Resources */,
 				CC9DE4B11C25CC3E009DA0BD /* Assets.xcassets in Resources */,
 				CC9DE4AC1C25CC3E009DA0BD /* Main.storyboard in Resources */,
@@ -329,7 +329,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC9DE4F21C2735C4009DA0BD /* BodyArea.m in Sources */,
-				CC9DE4A91C25CC3E009DA0BD /* ViewController.m in Sources */,
 				CC9DE4F41C2735C4009DA0BD /* Set.m in Sources */,
 				CC9DE4DC1C265CE2009DA0BD /* Exercise.m in Sources */,
 				CC9DE4F31C2735C4009DA0BD /* Set+CoreDataProperties.m in Sources */,
@@ -339,6 +338,7 @@
 				CC9DE4A31C25CC3E009DA0BD /* main.m in Sources */,
 				CC9DE4AF1C25CC3E009DA0BD /* Reps.xcdatamodeld in Sources */,
 				CC9DE4EF1C2735C4009DA0BD /* Routine+CoreDataProperties.m in Sources */,
+				CC9DE4FA1C275CCE009DA0BD /* ExerciseTableViewController.m in Sources */,
 				CC9DE4EE1C2735C4009DA0BD /* MuscleGroup.m in Sources */,
 				CC9DE4DB1C265CE2009DA0BD /* Exercise+CoreDataProperties.m in Sources */,
 				CC9DE4F11C2735C4009DA0BD /* BodyArea+CoreDataProperties.m in Sources */,
