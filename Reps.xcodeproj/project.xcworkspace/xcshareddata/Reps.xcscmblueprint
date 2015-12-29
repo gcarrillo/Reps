@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "52355EAADB075ADD6832AB9A3F845FC0BF8D5E22",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "52355EAADB075ADD6832AB9A3F845FC0BF8D5E22" : 0,
+    "4F3FC02AE0D37BC899ECBAADA031BFEA9A0587DE" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "60A336CF-BD09-4CC6-B270-278CF51AAE54",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "52355EAADB075ADD6832AB9A3F845FC0BF8D5E22" : "Reps\/",
+    "4F3FC02AE0D37BC899ECBAADA031BFEA9A0587DE" : "RSDayFlow\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Reps",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Reps.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/ruslanskorb\/RSDayFlow.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "4F3FC02AE0D37BC899ECBAADA031BFEA9A0587DE"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/gcarrillo\/Reps.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "52355EAADB075ADD6832AB9A3F845FC0BF8D5E22"
+    }
+  ]
+}
