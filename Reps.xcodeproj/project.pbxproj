@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC2E186F1C2DDDED00EA49AF /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC2E186D1C2DDDED00EA49AF /* Interface.storyboard */; };
+		CC2E18711C2DDDED00EA49AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC2E18701C2DDDED00EA49AF /* Assets.xcassets */; };
+		CC2E18781C2DDDED00EA49AF /* RepsWatch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = CC2E18771C2DDDED00EA49AF /* RepsWatch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		CC2E18801C2DDDED00EA49AF /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC2E187F1C2DDDED00EA49AF /* InterfaceController.m */; };
+		CC2E18831C2DDDED00EA49AF /* ExtensionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CC2E18821C2DDDED00EA49AF /* ExtensionDelegate.m */; };
+		CC2E18861C2DDDED00EA49AF /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC2E18851C2DDDED00EA49AF /* NotificationController.m */; };
+		CC2E18881C2DDDED00EA49AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC2E18871C2DDDED00EA49AF /* Assets.xcassets */; };
+		CC2E188C1C2DDDED00EA49AF /* RepsWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = CC2E186B1C2DDDEC00EA49AF /* RepsWatch.app */; };
+		CC2E19081C31130600EA49AF /* ExerciseDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC2E19071C31130600EA49AF /* ExerciseDetailTableViewController.m */; };
+		CC2E190A1C31E2CA00EA49AF /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC2E19091C31E2CA00EA49AF /* WatchConnectivity.framework */; };
 		CC9DE4A31C25CC3E009DA0BD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CC9DE4A21C25CC3E009DA0BD /* main.m */; };
 		CC9DE4A61C25CC3E009DA0BD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CC9DE4A51C25CC3E009DA0BD /* AppDelegate.m */; };
 		CC9DE4AC1C25CC3E009DA0BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC9DE4AA1C25CC3E009DA0BD /* Main.storyboard */; };
@@ -30,6 +40,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		CC2E18791C2DDDED00EA49AF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CC9DE4961C25CC3E009DA0BD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CC2E18761C2DDDED00EA49AF;
+			remoteInfo = "RepsWatch Extension";
+		};
+		CC2E188A1C2DDDED00EA49AF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CC9DE4961C25CC3E009DA0BD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CC2E186A1C2DDDEC00EA49AF;
+			remoteInfo = RepsWatch;
+		};
 		CC9DE4BB1C25CC3E009DA0BD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = CC9DE4961C25CC3E009DA0BD /* Project object */;
@@ -46,7 +70,49 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		CC2E18921C2DDDED00EA49AF /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				CC2E18781C2DDDED00EA49AF /* RepsWatch Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC2E18941C2DDDED00EA49AF /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				CC2E188C1C2DDDED00EA49AF /* RepsWatch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		CC2E186B1C2DDDEC00EA49AF /* RepsWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RepsWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC2E186E1C2DDDED00EA49AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		CC2E18701C2DDDED00EA49AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CC2E18721C2DDDED00EA49AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC2E18771C2DDDED00EA49AF /* RepsWatch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "RepsWatch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC2E187D1C2DDDED00EA49AF /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		CC2E187E1C2DDDED00EA49AF /* InterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterfaceController.h; sourceTree = "<group>"; };
+		CC2E187F1C2DDDED00EA49AF /* InterfaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterfaceController.m; sourceTree = "<group>"; };
+		CC2E18811C2DDDED00EA49AF /* ExtensionDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExtensionDelegate.h; sourceTree = "<group>"; };
+		CC2E18821C2DDDED00EA49AF /* ExtensionDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExtensionDelegate.m; sourceTree = "<group>"; };
+		CC2E18841C2DDDED00EA49AF /* NotificationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationController.h; sourceTree = "<group>"; };
+		CC2E18851C2DDDED00EA49AF /* NotificationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationController.m; sourceTree = "<group>"; };
+		CC2E18871C2DDDED00EA49AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CC2E18891C2DDDED00EA49AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC2E19061C31130600EA49AF /* ExerciseDetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExerciseDetailTableViewController.h; sourceTree = "<group>"; };
+		CC2E19071C31130600EA49AF /* ExerciseDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExerciseDetailTableViewController.m; sourceTree = "<group>"; };
+		CC2E19091C31E2CA00EA49AF /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = System/Library/Frameworks/WatchConnectivity.framework; sourceTree = SDKROOT; };
 		CC9DE49E1C25CC3E009DA0BD /* Reps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC9DE4A21C25CC3E009DA0BD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CC9DE4A41C25CC3E009DA0BD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -88,10 +154,18 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		CC2E18741C2DDDED00EA49AF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CC9DE49B1C25CC3E009DA0BD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC2E190A1C31E2CA00EA49AF /* WatchConnectivity.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,12 +186,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CC2E186C1C2DDDED00EA49AF /* RepsWatch */ = {
+			isa = PBXGroup;
+			children = (
+				CC2E186D1C2DDDED00EA49AF /* Interface.storyboard */,
+				CC2E18701C2DDDED00EA49AF /* Assets.xcassets */,
+				CC2E18721C2DDDED00EA49AF /* Info.plist */,
+			);
+			path = RepsWatch;
+			sourceTree = "<group>";
+		};
+		CC2E187B1C2DDDED00EA49AF /* RepsWatch Extension */ = {
+			isa = PBXGroup;
+			children = (
+				CC2E187E1C2DDDED00EA49AF /* InterfaceController.h */,
+				CC2E187F1C2DDDED00EA49AF /* InterfaceController.m */,
+				CC2E18811C2DDDED00EA49AF /* ExtensionDelegate.h */,
+				CC2E18821C2DDDED00EA49AF /* ExtensionDelegate.m */,
+				CC2E18841C2DDDED00EA49AF /* NotificationController.h */,
+				CC2E18851C2DDDED00EA49AF /* NotificationController.m */,
+				CC2E18871C2DDDED00EA49AF /* Assets.xcassets */,
+				CC2E18891C2DDDED00EA49AF /* Info.plist */,
+				CC2E187C1C2DDDED00EA49AF /* Supporting Files */,
+			);
+			path = "RepsWatch Extension";
+			sourceTree = "<group>";
+		};
+		CC2E187C1C2DDDED00EA49AF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CC2E187D1C2DDDED00EA49AF /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		CC9DE4951C25CC3E009DA0BD = {
 			isa = PBXGroup;
 			children = (
+				CC2E19091C31E2CA00EA49AF /* WatchConnectivity.framework */,
 				CC9DE4A01C25CC3E009DA0BD /* Reps */,
 				CC9DE4BD1C25CC3E009DA0BD /* RepsTests */,
 				CC9DE4C81C25CC3E009DA0BD /* RepsUITests */,
+				CC2E186C1C2DDDED00EA49AF /* RepsWatch */,
+				CC2E187B1C2DDDED00EA49AF /* RepsWatch Extension */,
 				CC9DE49F1C25CC3E009DA0BD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -128,6 +239,8 @@
 				CC9DE49E1C25CC3E009DA0BD /* Reps.app */,
 				CC9DE4BA1C25CC3E009DA0BD /* RepsTests.xctest */,
 				CC9DE4C51C25CC3E009DA0BD /* RepsUITests.xctest */,
+				CC2E186B1C2DDDEC00EA49AF /* RepsWatch.app */,
+				CC2E18771C2DDDED00EA49AF /* RepsWatch Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -160,6 +273,8 @@
 				CC9DE4F71C275CCE009DA0BD /* ExerciseTableViewController.h */,
 				CC9DE4F81C275CCE009DA0BD /* ExerciseTableViewController.m */,
 				CC9DE4AA1C25CC3E009DA0BD /* Main.storyboard */,
+				CC2E19061C31130600EA49AF /* ExerciseDetailTableViewController.h */,
+				CC2E19071C31130600EA49AF /* ExerciseDetailTableViewController.m */,
 				CC9DE4B01C25CC3E009DA0BD /* Assets.xcassets */,
 				CC9DE4B21C25CC3E009DA0BD /* LaunchScreen.storyboard */,
 				CC9DE4B51C25CC3E009DA0BD /* Info.plist */,
@@ -199,6 +314,40 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		CC2E186A1C2DDDEC00EA49AF /* RepsWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC2E18931C2DDDED00EA49AF /* Build configuration list for PBXNativeTarget "RepsWatch" */;
+			buildPhases = (
+				CC2E18691C2DDDEC00EA49AF /* Resources */,
+				CC2E18921C2DDDED00EA49AF /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CC2E187A1C2DDDED00EA49AF /* PBXTargetDependency */,
+			);
+			name = RepsWatch;
+			productName = RepsWatch;
+			productReference = CC2E186B1C2DDDEC00EA49AF /* RepsWatch.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		CC2E18761C2DDDED00EA49AF /* RepsWatch Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC2E18911C2DDDED00EA49AF /* Build configuration list for PBXNativeTarget "RepsWatch Extension" */;
+			buildPhases = (
+				CC2E18731C2DDDED00EA49AF /* Sources */,
+				CC2E18741C2DDDED00EA49AF /* Frameworks */,
+				CC2E18751C2DDDED00EA49AF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "RepsWatch Extension";
+			productName = "RepsWatch Extension";
+			productReference = CC2E18771C2DDDED00EA49AF /* RepsWatch Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
 		CC9DE49D1C25CC3E009DA0BD /* Reps */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = CC9DE4CE1C25CC3E009DA0BD /* Build configuration list for PBXNativeTarget "Reps" */;
@@ -206,10 +355,12 @@
 				CC9DE49A1C25CC3E009DA0BD /* Sources */,
 				CC9DE49B1C25CC3E009DA0BD /* Frameworks */,
 				CC9DE49C1C25CC3E009DA0BD /* Resources */,
+				CC2E18941C2DDDED00EA49AF /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				CC2E188B1C2DDDED00EA49AF /* PBXTargetDependency */,
 			);
 			name = Reps;
 			productName = Reps;
@@ -261,6 +412,13 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Gabriel Carrillo";
 				TargetAttributes = {
+					CC2E186A1C2DDDEC00EA49AF = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = U3TKWCN27S;
+					};
+					CC2E18761C2DDDED00EA49AF = {
+						CreatedOnToolsVersion = 7.2;
+					};
 					CC9DE49D1C25CC3E009DA0BD = {
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = U3TKWCN27S;
@@ -291,11 +449,30 @@
 				CC9DE49D1C25CC3E009DA0BD /* Reps */,
 				CC9DE4B91C25CC3E009DA0BD /* RepsTests */,
 				CC9DE4C41C25CC3E009DA0BD /* RepsUITests */,
+				CC2E186A1C2DDDEC00EA49AF /* RepsWatch */,
+				CC2E18761C2DDDED00EA49AF /* RepsWatch Extension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		CC2E18691C2DDDEC00EA49AF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC2E18711C2DDDED00EA49AF /* Assets.xcassets in Resources */,
+				CC2E186F1C2DDDED00EA49AF /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC2E18751C2DDDED00EA49AF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC2E18881C2DDDED00EA49AF /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CC9DE49C1C25CC3E009DA0BD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -324,6 +501,16 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		CC2E18731C2DDDED00EA49AF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC2E18831C2DDDED00EA49AF /* ExtensionDelegate.m in Sources */,
+				CC2E18801C2DDDED00EA49AF /* InterfaceController.m in Sources */,
+				CC2E18861C2DDDED00EA49AF /* NotificationController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CC9DE49A1C25CC3E009DA0BD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -333,6 +520,7 @@
 				CC9DE4DC1C265CE2009DA0BD /* Exercise.m in Sources */,
 				CC9DE4F31C2735C4009DA0BD /* Set+CoreDataProperties.m in Sources */,
 				CC9DE4F01C2735C4009DA0BD /* Routine.m in Sources */,
+				CC2E19081C31130600EA49AF /* ExerciseDetailTableViewController.m in Sources */,
 				CC9DE4ED1C2735C4009DA0BD /* MuscleGroup+CoreDataProperties.m in Sources */,
 				CC9DE4A61C25CC3E009DA0BD /* AppDelegate.m in Sources */,
 				CC9DE4A31C25CC3E009DA0BD /* main.m in Sources */,
@@ -364,6 +552,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		CC2E187A1C2DDDED00EA49AF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CC2E18761C2DDDED00EA49AF /* RepsWatch Extension */;
+			targetProxy = CC2E18791C2DDDED00EA49AF /* PBXContainerItemProxy */;
+		};
+		CC2E188B1C2DDDED00EA49AF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CC2E186A1C2DDDEC00EA49AF /* RepsWatch */;
+			targetProxy = CC2E188A1C2DDDED00EA49AF /* PBXContainerItemProxy */;
+		};
 		CC9DE4BC1C25CC3E009DA0BD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = CC9DE49D1C25CC3E009DA0BD /* Reps */;
@@ -377,6 +575,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		CC2E186D1C2DDDED00EA49AF /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC2E186E1C2DDDED00EA49AF /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
 		CC9DE4AA1C25CC3E009DA0BD /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -396,6 +602,66 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		CC2E188D1C2DDDED00EA49AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Erik Carrillo (8DKNQ3LWPZ)";
+				IBSC_MODULE = RepsWatch_Extension;
+				INFOPLIST_FILE = RepsWatch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = net.gcarrillo.Reps.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Debug;
+		};
+		CC2E188E1C2DDDED00EA49AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Erik Carrillo (8DKNQ3LWPZ)";
+				IBSC_MODULE = RepsWatch_Extension;
+				INFOPLIST_FILE = RepsWatch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = net.gcarrillo.Reps.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Release;
+		};
+		CC2E188F1C2DDDED00EA49AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "RepsWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.gcarrillo.Reps.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Debug;
+		};
+		CC2E18901C2DDDED00EA49AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "RepsWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.gcarrillo.Reps.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Release;
+		};
 		CC9DE4CC1C25CC3E009DA0BD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -553,6 +819,22 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		CC2E18911C2DDDED00EA49AF /* Build configuration list for PBXNativeTarget "RepsWatch Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC2E188F1C2DDDED00EA49AF /* Debug */,
+				CC2E18901C2DDDED00EA49AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CC2E18931C2DDDED00EA49AF /* Build configuration list for PBXNativeTarget "RepsWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC2E188D1C2DDDED00EA49AF /* Debug */,
+				CC2E188E1C2DDDED00EA49AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		CC9DE4991C25CC3E009DA0BD /* Build configuration list for PBXProject "Reps" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

@@ -4,14 +4,29 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Notification - RepsWatch.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
 		<key>Reps.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>RepsWatch.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>CC2E186A1C2DDDEC00EA49AF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>CC9DE49D1C25CC3E009DA0BD</key>
 		<dict>
 			<key>primary</key>
