@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Exercise Table View Controller-->
@@ -16,21 +15,21 @@
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="exerciseTableViewCell" textLabel="RvU-P1-too" detailTextLabel="1dY-ZI-UC1" style="IBUITableViewCellStyleSubtitle" id="Nat-Xy-ZXk">
-                                <rect key="frame" x="0.0" y="113.5" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="114" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Nat-Xy-ZXk" id="j1J-lZ-JW7">
-                                    <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="567" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="RvU-P1-too">
-                                            <rect key="frame" x="15" y="6" width="31.5" height="19.5"/>
+                                            <rect key="frame" x="15" y="5" width="32" height="20"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1dY-ZI-UC1">
-                                            <rect key="frame" x="15" y="25.5" width="30.5" height="13.5"/>
+                                            <rect key="frame" x="15" y="25" width="31" height="14"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -66,18 +65,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Maz-MZ-lyR" userLabel="datePickerView" customClass="RSDFDatePickerView">
-                                <rect key="frame" x="0.0" y="64" width="600" height="231"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YgC-dn-gJu">
+                                <rect key="frame" x="0.0" y="308" width="600" height="243"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="MrE-Ql-Zo4" id="MPR-vB-5rb"/>
+                                    <outlet property="delegate" destination="MrE-Ql-Zo4" id="XjS-YB-03Q"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Maz-MZ-lyR" userLabel="datePickerView" customClass="RSDFDatePickerView">
+                                <rect key="frame" x="0.0" y="64" width="600" height="244"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Maz-MZ-lyR" firstAttribute="bottom" secondItem="4Mq-h5-P7m" secondAttribute="bottomMargin" id="Apb-pR-EVq"/>
-                            <constraint firstItem="Maz-MZ-lyR" firstAttribute="leading" secondItem="4Mq-h5-P7m" secondAttribute="leadingMargin" constant="-20" id="Kd1-XI-fWW"/>
-                            <constraint firstItem="Maz-MZ-lyR" firstAttribute="top" secondItem="d0k-Re-cYk" secondAttribute="bottom" id="R5q-c2-zqn"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Maz-MZ-lyR" secondAttribute="trailing" constant="-20" id="hCL-aW-Wuj"/>
-                            <constraint firstItem="Maz-MZ-lyR" firstAttribute="top" secondItem="d0k-Re-cYk" secondAttribute="bottom" id="rbe-rw-1aO"/>
+                            <constraint firstItem="YgC-dn-gJu" firstAttribute="top" secondItem="Maz-MZ-lyR" secondAttribute="bottom" id="FJ0-Pf-J6u"/>
+                            <constraint firstItem="Maz-MZ-lyR" firstAttribute="top" secondItem="d0k-Re-cYk" secondAttribute="bottom" id="IH6-1L-I3Q"/>
+                            <constraint firstAttribute="trailing" secondItem="Maz-MZ-lyR" secondAttribute="trailing" id="TD3-Gm-Owe"/>
+                            <constraint firstAttribute="trailing" secondItem="YgC-dn-gJu" secondAttribute="trailing" id="jjK-QV-5oD"/>
+                            <constraint firstItem="0AI-Hg-Ysb" firstAttribute="top" secondItem="YgC-dn-gJu" secondAttribute="bottom" id="mAu-pk-rnS"/>
+                            <constraint firstItem="Maz-MZ-lyR" firstAttribute="leading" secondItem="4Mq-h5-P7m" secondAttribute="leading" id="p8n-ff-mW2"/>
+                            <constraint firstItem="YgC-dn-gJu" firstAttribute="leading" secondItem="4Mq-h5-P7m" secondAttribute="leading" id="uUU-iw-cjj"/>
+                            <constraint firstItem="YgC-dn-gJu" firstAttribute="height" secondItem="Maz-MZ-lyR" secondAttribute="height" id="uqc-1s-kFj"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="DXA-vL-odO">
@@ -90,6 +101,7 @@
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
                     <connections>
                         <outlet property="datePickerView" destination="Maz-MZ-lyR" id="9qb-lC-Snc"/>
+                        <outlet property="tableView" destination="YgC-dn-gJu" id="cFM-H8-Vtq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iT4-aB-HAm" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -141,14 +153,14 @@
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="titleCell" textLabel="ZaR-dU-DQS" style="IBUITableViewCellStyleDefault" id="nLJ-OE-PCN">
-                                <rect key="frame" x="0.0" y="113.5" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="114" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nLJ-OE-PCN" id="yyX-Oc-NcJ">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Exercise" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ZaR-dU-DQS">
-                                            <rect key="frame" x="15" y="0.0" width="570" height="43.5"/>
+                                            <rect key="frame" x="15" y="0.0" width="570" height="43"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -158,14 +170,14 @@
                                 </tableViewCellContentView>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="muscleGroupCell" textLabel="ui0-rk-PSO" style="IBUITableViewCellStyleDefault" id="A6a-JZ-ZhK">
-                                <rect key="frame" x="0.0" y="157.5" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="158" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="A6a-JZ-ZhK" id="EFr-XV-lpw">
-                                    <rect key="frame" x="0.0" y="0.0" width="567" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="567" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Muscle Group" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ui0-rk-PSO">
-                                            <rect key="frame" x="15" y="0.0" width="550" height="43.5"/>
+                                            <rect key="frame" x="15" y="0.0" width="550" height="43"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
