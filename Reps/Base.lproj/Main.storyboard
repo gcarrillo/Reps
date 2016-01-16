@@ -305,7 +305,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="9m2-x1-L5O" firstAttribute="top" secondItem="qV6-kj-HUI" secondAttribute="top" id="01N-ID-FBB"/>
-                            <constraint firstItem="35H-fa-neQ" firstAttribute="top" secondItem="9m2-x1-L5O" secondAttribute="bottom" id="DlO-15-KHB"/>
+                            <constraint firstItem="jmO-wX-K6m" firstAttribute="top" secondItem="9m2-x1-L5O" secondAttribute="bottom" priority="750" id="5VJ-kc-fFs"/>
+                            <constraint firstItem="35H-fa-neQ" firstAttribute="top" secondItem="9m2-x1-L5O" secondAttribute="bottom" priority="750" id="DlO-15-KHB"/>
                             <constraint firstItem="9m2-x1-L5O" firstAttribute="leading" secondItem="qV6-kj-HUI" secondAttribute="leading" id="LOA-G2-trX"/>
                             <constraint firstItem="5tn-22-U7h" firstAttribute="top" secondItem="35H-fa-neQ" secondAttribute="bottom" id="Piu-vc-f0e"/>
                             <constraint firstItem="jmO-wX-K6m" firstAttribute="leading" secondItem="qV6-kj-HUI" secondAttribute="leading" id="VVp-nE-Lgp"/>
@@ -319,13 +320,15 @@
                     <tabBarItem key="tabBarItem" title="New" id="x4D-3e-B6J"/>
                     <connections>
                         <outlet property="datePickerView" destination="jmO-wX-K6m" id="Jg7-NN-r5v"/>
+                        <outlet property="datePickerViewConstraint" destination="5VJ-kc-fFs" id="WNv-NU-v5b"/>
                         <outlet property="pickerView" destination="35H-fa-neQ" id="Dw6-pj-JaJ"/>
+                        <outlet property="pickerViewConstraint" destination="DlO-15-KHB" id="ALi-Oq-tbZ"/>
                         <outlet property="tableView" destination="9m2-x1-L5O" id="gb7-k7-Bop"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tRj-bd-sNU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-485" y="950"/>
+            <point key="canvasLocation" x="-543" y="949"/>
         </scene>
         <!--Catalog-->
         <scene sceneID="EQb-b2-cum">

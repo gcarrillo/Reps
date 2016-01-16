@@ -15,6 +15,8 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UIPickerView *pickerView;
 @property (weak, nonatomic) IBOutlet UIDatePicker *datePickerView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *pickerViewConstraint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *datePickerViewConstraint;
 
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (strong, nonatomic) NSArray *exercises;

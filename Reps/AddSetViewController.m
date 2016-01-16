@@ -100,27 +100,54 @@ typedef NS_ENUM(NSInteger, AddSetViewControllerState) {
     switch (indexPath.section) {
         case 0:
             self.state = AddSetViewControllerStateExercise;
-            self.datePickerView.hidden = YES;
-            self.pickerView.hidden = NO;
             break;
             
         case 1:
             self.state = AddSetViewControllerStateDate;
-            self.datePickerView.hidden = NO;
-            self.pickerView.hidden = YES;
             break;
             
         case 2:
             self.state = AddSetViewControllerStateWeight;
-            self.datePickerView.hidden = YES;
-            self.pickerView.hidden = NO;
             break;
             
         default:
             break;
     }
     
+    [self.view layoutIfNeeded];
+    [UIView animateWithDuration:0.5 animations:^{
+        [self updateConstraintsForState:self.state];
+        [self.view layoutIfNeeded];
+    }];
     [self.pickerView reloadAllComponents];
+}
+
+- (void)updateConstraintsForState:(AddSetViewControllerState)state {
+    switch (state) {
+        case AddSetViewControllerStateExercise:
+            self.datePickerView.hidden = YES;
+            self.pickerView.hidden = NO;
+            self.pickerViewConstraint.priority = UILayoutPriorityDefaultHigh + 1;
+            self.datePickerViewConstraint.priority = UILayoutPriorityDefaultHigh - 1;
+            break;
+            
+        case AddSetViewControllerStateDate:
+            self.datePickerView.hidden = NO;
+            self.pickerView.hidden = YES;
+            self.pickerViewConstraint.priority = UILayoutPriorityDefaultHigh - 1;
+            self.datePickerViewConstraint.priority = UILayoutPriorityDefaultHigh + 1;
+            break;
+            
+        case AddSetViewControllerStateWeight:
+            self.datePickerView.hidden = YES;
+            self.pickerView.hidden = NO;
+            self.pickerViewConstraint.priority = UILayoutPriorityDefaultHigh + 1;
+            self.datePickerViewConstraint.priority = UILayoutPriorityDefaultHigh - 1;
+            break;
+            
+        default:
+            break;
+    }
 }
 
 #pragma mark - UITableViewDataSource
