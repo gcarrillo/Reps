@@ -37,6 +37,7 @@
 		CC9DE4F41C2735C4009DA0BD /* Set.m in Sources */ = {isa = PBXBuildFile; fileRef = CC9DE4EC1C2735C4009DA0BD /* Set.m */; };
 		CC9DE4FA1C275CCE009DA0BD /* ExerciseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC9DE4F81C275CCE009DA0BD /* ExerciseTableViewController.m */; };
 		CC9DE56B1C279546009DA0BD /* seed.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = CC9DE56A1C279546009DA0BD /* seed.sqlite */; };
+		CCD4D2A81C4ACA2B007159D2 /* AddSetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCD4D2A71C4ACA2B007159D2 /* AddSetViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -130,6 +131,8 @@
 		CC9DE4F71C275CCE009DA0BD /* ExerciseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExerciseTableViewController.h; sourceTree = "<group>"; };
 		CC9DE4F81C275CCE009DA0BD /* ExerciseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExerciseTableViewController.m; sourceTree = "<group>"; };
 		CC9DE56A1C279546009DA0BD /* seed.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = seed.sqlite; sourceTree = "<group>"; };
+		CCD4D2A61C4ACA2B007159D2 /* AddSetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddSetViewController.h; sourceTree = "<group>"; };
+		CCD4D2A71C4ACA2B007159D2 /* AddSetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddSetViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -233,6 +236,8 @@
 				CC9DE4F71C275CCE009DA0BD /* ExerciseTableViewController.h */,
 				CC9DE4F81C275CCE009DA0BD /* ExerciseTableViewController.m */,
 				CC9DE4AA1C25CC3E009DA0BD /* Main.storyboard */,
+				CCD4D2A61C4ACA2B007159D2 /* AddSetViewController.h */,
+				CCD4D2A71C4ACA2B007159D2 /* AddSetViewController.m */,
 				CC2E19261C32EA7300EA49AF /* CalendarViewController.h */,
 				CC2E19271C32EA7300EA49AF /* CalendarViewController.m */,
 				CC2E19061C31130600EA49AF /* ExerciseDetailTableViewController.h */,
@@ -419,6 +424,7 @@
 				CC9DE4A61C25CC3E009DA0BD /* AppDelegate.m in Sources */,
 				CC9DE4A31C25CC3E009DA0BD /* main.m in Sources */,
 				CC9DE4AF1C25CC3E009DA0BD /* Reps.xcdatamodeld in Sources */,
+				CCD4D2A81C4ACA2B007159D2 /* AddSetViewController.m in Sources */,
 				CC9DE4EF1C2735C4009DA0BD /* Routine+CoreDataProperties.m in Sources */,
 				CC9DE4FA1C275CCE009DA0BD /* ExerciseTableViewController.m in Sources */,
 				CC2E19411C32EE6F00EA49AF /* RSDFDatePickerView.m in Sources */,
