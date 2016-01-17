@@ -15,6 +15,7 @@
 @interface ExerciseTableViewController ()
 
 @property (nonatomic, retain) Exercise *selectedExercise;
+@property (nonatomic, retain) Exercise *moreInfoExercise;
 
 @end
 
@@ -36,6 +37,16 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+    ExerciseDetailTableViewController *vc = [segue destinationViewController];
+    vc.exercise = self.moreInfoExercise;
 }
 
 #pragma mark - Table view data source
@@ -83,16 +94,14 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     self.selectedExercise = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    [self performSegueWithIdentifier: @"showDetail" sender: self];
+    //[self performSegueWithIdentifier: @"showDetail" sender: self];
+    [self.delegate exerciseTableViewController:self didChooseExercise:self.selectedExercise];
 }
 
-#pragma mark - Navigation
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-    ExerciseDetailTableViewController *vc = [segue destinationViewController];
-    vc.exercise = self.selectedExercise;
+- (void)tableView:(UITableView *)tableView
+accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath {
+    self.moreInfoExercise = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    [self performSegueWithIdentifier:@"showExerciseDetailSegue" sender:self];
 }
 
 #pragma mark - Fetched results controller
@@ -195,5 +204,9 @@
  [self.tableView reloadData];
  }
  */
+
+- (IBAction)cancelButtonTapped:(id)sender {
+    [self.delegate exerciseTableViewControllerDidCancel:self];
+}
 
 @end

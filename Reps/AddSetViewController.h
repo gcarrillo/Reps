@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ExerciseTableViewController.h"
 
 @class Exercise;
 
-@interface AddSetViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, UIPickerViewDelegate, UIPickerViewDataSource>
+@interface AddSetViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, UIPickerViewDelegate, UIPickerViewDataSource, ExerciseTableViewControllerProtocol>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet UIPickerView *pickerView;

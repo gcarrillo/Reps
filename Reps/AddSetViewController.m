@@ -91,15 +91,15 @@ typedef NS_ENUM(NSInteger, AddSetViewControllerState) {
     // Dispose of any resources that can be recreated.
 }
 
-/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    ExerciseTableViewController *vc = [((UINavigationController *)[segue destinationViewController]).viewControllers firstObject];
+    vc.delegate = self;
 }
-*/
 
 #pragma mark - UITableViewDelegate
 
@@ -109,7 +109,8 @@ typedef NS_ENUM(NSInteger, AddSetViewControllerState) {
     // TODO: verify this
     switch (indexPath.section) {
         case 0:
-            self.state = AddSetViewControllerStateExercise;
+            //self.state = AddSetViewControllerStateExercise;
+            [self performSegueWithIdentifier:@"selectExerciseSegue" sender:self];
             break;
             
         case 1:
@@ -394,6 +395,19 @@ numberOfRowsInComponent:(NSInteger)component {
     if ([[self managedObjectContext] save:&error] == NO) {
         NSAssert(NO, @"Error saving context: %@\n%@", [error localizedDescription], [error userInfo]);
     }
+}
+
+#pragma mark - ExerciseTableViewControllerProtocol
+
+- (void)exerciseTableViewController:(ExerciseTableViewController *)vc didChooseExercise:(Exercise *)exercise {
+    NSLog(@"User did select an exercise");
+    // dismiss the view controller
+    self.selectedExercise = exercise;
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)exerciseTableViewControllerDidCancel:(ExerciseTableViewController *)vc {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end
