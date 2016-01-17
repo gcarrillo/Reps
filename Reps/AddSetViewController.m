@@ -53,28 +53,28 @@ typedef NS_ENUM(NSInteger, AddSetViewControllerState) {
     
     AppDelegate *delegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     self.managedObjectContext = delegate.managedObjectContext;
+
+//    // Do the CoreData fetch
+//    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+//    
+//    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Exercise"
+//                                              inManagedObjectContext:self.managedObjectContext];
+//    [fetchRequest setEntity:entity];
+//    
+//    [fetchRequest setFetchBatchSize:20];
+//    
+//    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
+//    [fetchRequest setSortDescriptors:@[sortDescriptor]];
+//    
+//    NSError *error = nil;
+//    self.exercises = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
+//    if (!self.exercises) {
+//        NSLog(@"Error fetching Employee objects: %@\n%@", [error localizedDescription], [error userInfo]);
+//        abort();
+//    }
     
-    // Do the CoreData fetch
-    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-    
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Exercise"
-                                              inManagedObjectContext:self.managedObjectContext];
-    [fetchRequest setEntity:entity];
-    
-    [fetchRequest setFetchBatchSize:20];
-    
-    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
-    [fetchRequest setSortDescriptors:@[sortDescriptor]];
-    
-    NSError *error = nil;
-    self.exercises = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
-    if (!self.exercises) {
-        NSLog(@"Error fetching Employee objects: %@\n%@", [error localizedDescription], [error userInfo]);
-        abort();
-    }
-    
-    self.selectedExercise = [self.exercises objectAtIndex:0];
-    self.state = AddSetViewControllerStateExercise;
+    self.selectedExercise = nil;
+    self.state = AddSetViewControllerStateWeight;
     [self updateLayoutForState:self.state];
 }
 
@@ -104,9 +104,6 @@ typedef NS_ENUM(NSInteger, AddSetViewControllerState) {
 #pragma mark - UITableViewDelegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"In tableView:didSelectRowAtIndexPath");
-    
-    // TODO: verify this
     switch (indexPath.section) {
         case 0:
             //self.state = AddSetViewControllerStateExercise;
@@ -132,10 +129,7 @@ typedef NS_ENUM(NSInteger, AddSetViewControllerState) {
 - (void)updateLayoutForState:(AddSetViewControllerState)state {
     switch (state) {
         case AddSetViewControllerStateExercise:
-            self.datePickerView.hidden = YES;
-            self.pickerView.hidden = NO;
-            self.pickerViewConstraint.priority = UILayoutPriorityDefaultHigh + 1;
-            self.datePickerViewConstraint.priority = UILayoutPriorityDefaultHigh - 1;
+            // Shouldn't get here.
             break;
             
         case AddSetViewControllerStateDate:
@@ -166,7 +160,11 @@ typedef NS_ENUM(NSInteger, AddSetViewControllerState) {
         case 0:
             cell = [tableView dequeueReusableCellWithIdentifier:@"SetExerciseCell"
                                                                     forIndexPath:indexPath];
-            cell.textLabel.text = self.selectedExercise.name;
+            if (self.selectedExercise) {
+                cell.textLabel.text = self.selectedExercise.name;
+            } else {
+                cell.textLabel.text = @"Tap to select an exercise";
+            }
             break;
             
         case 1:
