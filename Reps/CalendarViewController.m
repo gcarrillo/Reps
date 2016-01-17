@@ -21,28 +21,42 @@
 
 @implementation CalendarViewController
 
-- (instancetype)initWithCoder:(NSCoder *)coder
-{
-    self = [super initWithCoder:coder];
-    if (self) {
-        _allSetsDict = [[NSMutableDictionary alloc] init];
-    }
-    return self;
-}
-
 - (IBAction)todayButtonTapped:(id)sender {
     [self.datePickerView scrollToToday:YES];
+    [self.datePickerView selectDate:[NSDate date]];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
     
     self.datePickerView.delegate = self;
     self.datePickerView.dataSource = self;
     
     AppDelegate *delegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     self.managedObjectContext = delegate.managedObjectContext;
+    
+    [[NSNotificationCenter defaultCenter]
+     addObserver:self
+     selector:@selector(mocDidChange)
+     name:NSManagedObjectContextObjectsDidChangeNotification
+     object:self.managedObjectContext];
+    
+    [self fetchSets];
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+- (void)mocDidChange {
+    [self fetchSets];
+    [self.datePickerView reloadData];
+    [self.tableView reloadData];
+}
+
+- (void)fetchSets {
+    self.allSetsDict = [[NSMutableDictionary alloc] init];
     
     // Do the CoreData fetch
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
@@ -52,7 +66,7 @@
     
     [fetchRequest setFetchBatchSize:20];
     
-    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"date" ascending:NO];
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"date" ascending:YES];
     [fetchRequest setSortDescriptors:@[sortDescriptor]];
     
     NSError *error = nil;
@@ -76,11 +90,7 @@
         [((NSMutableArray *)[self.allSetsDict objectForKey:setDate]) addObject:s];
     }
     
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    self.setsForDay = [self.allSetsDict objectForKey:self.datePickerView.selectedDate];
 }
 
 /*

@@ -86,6 +86,8 @@
  */
 @property (nonatomic, getter = isPagingEnabled) BOOL pagingEnabled;
 
+@property (nonatomic, readonly, strong) NSDate *selectedDate;
+
 ///----------------------------
 /// @name Scrolling to the Date
 ///----------------------------

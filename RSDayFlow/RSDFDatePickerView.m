@@ -44,7 +44,7 @@ static NSString * const RSDFDatePickerViewDayCellIdentifier = @"RSDFDatePickerVi
 @property (nonatomic, readonly, strong) RSDFDatePickerCollectionViewLayout *collectionViewLayout;
 @property (nonatomic, readonly, strong) NSDate *today;
 @property (nonatomic, readonly, assign) NSUInteger daysInWeek;
-@property (nonatomic, readonly, strong) NSDate *selectedDate;
+//@property (nonatomic, readonly, strong) NSDate *selectedDate;
 
 // From and to date are the currently displayed dates in the calendar
 // These values change in infinite scrolling mode
