@@ -73,10 +73,17 @@ typedef NS_ENUM(NSInteger, AddSetViewControllerState) {
         abort();
     }
     
-    self.selectedDate = [NSDate date];
     self.selectedExercise = [self.exercises objectAtIndex:0];
     self.state = AddSetViewControllerStateExercise;
     [self updateLayoutForState:self.state];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    NSLog(@"In viewWillAppear");
+    self.selectedDate = [NSDate date];
+    
+    // TODO: reload only the date row for efficiency
+    [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning {
