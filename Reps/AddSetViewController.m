@@ -9,6 +9,7 @@
 #import "AddSetViewController.h"
 #import "AppDelegate.h"
 #import "Exercise+CoreDataProperties.h"
+#import "Set+CoreDataProperties.h"
 
 typedef NS_ENUM(NSInteger, AddSetViewControllerState) {
     AddSetViewControllerStateExercise,
@@ -32,7 +33,6 @@ typedef NS_ENUM(NSInteger, AddSetViewControllerState) {
     if (self) {
         _pickerRepsValues = [[NSMutableArray alloc] init];
         _pickerWeightValues = [[NSMutableArray alloc] init];
-        _selectedDate = [NSDate date];
     }
     return self;
 }
@@ -73,7 +73,10 @@ typedef NS_ENUM(NSInteger, AddSetViewControllerState) {
         abort();
     }
     
+    self.selectedDate = [NSDate date];
+    self.selectedExercise = [self.exercises objectAtIndex:0];
     self.state = AddSetViewControllerStateExercise;
+    [self updateLayoutForState:self.state];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -113,16 +116,12 @@ typedef NS_ENUM(NSInteger, AddSetViewControllerState) {
         default:
             break;
     }
-    
-    [self.view layoutIfNeeded];
-    [UIView animateWithDuration:0.5 animations:^{
-        [self updateConstraintsForState:self.state];
-        [self.view layoutIfNeeded];
-    }];
+
+    [self updateLayoutForState:self.state];
     [self.pickerView reloadAllComponents];
 }
 
-- (void)updateConstraintsForState:(AddSetViewControllerState)state {
+- (void)updateLayoutForState:(AddSetViewControllerState)state {
     switch (state) {
         case AddSetViewControllerStateExercise:
             self.datePickerView.hidden = YES;
@@ -203,7 +202,7 @@ titleForHeaderInSection:(NSInteger)section {
             break;
             
         case 2:
-            return @"Weight";
+            return @"Reps & Weight";
             break;
             
         default:
@@ -345,4 +344,49 @@ numberOfRowsInComponent:(NSInteger)component {
     self.selectedDate = self.datePickerView.date;
     [self.tableView reloadData];
 }
+
+#pragma mark - Save set
+
+- (IBAction)saveButtonTapped:(id)sender {
+    NSString *alertMessage = [NSString stringWithFormat:@"%@: %d reps X %.2f lbs",
+                              self.selectedExercise.name, self.selectedReps.intValue,
+                              self.selectedWeight.floatValue];
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Save Set?"
+                                                                   message:alertMessage
+                                                            preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction *OKAction = [UIAlertAction actionWithTitle:@"OK"
+                                                       style:UIAlertActionStyleDefault
+                                                     handler:^(UIAlertAction * action)
+    {
+        NSLog(@"You pressed button OK");
+        [self saveNewSet];
+    }];
+    
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Cancel"
+                                                           style:UIAlertActionStyleCancel
+                                                         handler:^(UIAlertAction * action)
+    {
+        NSLog(@"You pressed button cancel");
+    }];
+    
+    [alert addAction:OKAction];
+    [alert addAction:cancelAction];
+    
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
+- (void)saveNewSet {
+    Set *set = [NSEntityDescription insertNewObjectForEntityForName:@"Set" inManagedObjectContext:self.managedObjectContext];
+    set.exercise = self.selectedExercise;
+    set.date = self.selectedDate;
+    set.reps = self.selectedReps;
+    set.weight = self.selectedWeight;
+    
+    NSError *error = nil;
+    if ([[self managedObjectContext] save:&error] == NO) {
+        NSAssert(NO, @"Error saving context: %@\n%@", [error localizedDescription], [error userInfo]);
+    }
+}
+
 @end

@@ -26,5 +26,6 @@
 @property (nonatomic, retain) NSDate *selectedDate;
 
 - (IBAction)datePickerDidSelectDate:(id)sender;
+- (IBAction)saveButtonTapped:(id)sender;
 
 @end
